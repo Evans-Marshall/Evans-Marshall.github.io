@@ -1,66 +1,61 @@
-.container {
-    display: inline-block;
-    cursor: pointer;
-}
-
-.bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #333;
-    margin: 6px 0;
-    transition: 0.4s;
-}
-
-/* Rotate first bar */
-.change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-    transform: rotate(-45deg) translate(-9px, 6px) ;
-}
-
-/* Fade out the second bar */
-.change .bar2 {
-    opacity: 0;
-}
-
-/* Rotate last bar */
-.change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-    transform: rotate(45deg) translate(-8px, -8px) ;
-}
 /* This main css file contains the default rules and is geared toward the small/phone view */
 
-* { box-sizing: border-box;} /* This wildcard applies to all elements ensuring a box layout model */
+* { box-sizing: border-box;}  /* This wildcard applies to all elements ensuring a box layout model */
 
-#tenday {
-    display:none
-}
 body {
-    font-size: 16px;
-    background-image: url("/images/background.jpg");
-    
+  font-size: 16px;
+  background-color: azure;
+  /* Declare the base font-family - from google font api or other */
 }
 
 header, nav, main, footer { /* the comma means apply the following CSS declarations to all of the listed elements */
   /* Declare the maximum width and other main element rules to limit the stretch on wide views */
 }
 
-header {text-align: center;
-    vertical-align: top;
-    font-size: 32px
+header {
+    font-size: 1.25em;
+    vertical-align:text-top;
 }
-header h1 {}
-    
-header img {
+header h1 {
+    float:center;
 }
-header .subheading {}
+header img {float:left}
+#subheading{
+    font-size: 1.1em;
+}
 
 nav {}
 nav button {}
-nav ul {}
+nav ul {
+    line-height: 1.5;
+    
+}
 nav ul li {}
 nav ul li a {}
 nav ul li.active a {}
 nav ul li a:hover {}
+
+#grid{
+    display: grid;
+    border: 1px;
+    grid-row-gap: .15em;
+    align-content: center;
+}
+
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: center;
+}
+
+#tenday{
+    display:none;
+}
+
+#bball{
+    width: 100%;
+}
+
 
 main {}
 main h2 {}
@@ -69,18 +64,15 @@ main figure img { width: 100%; }
 
 section {}
 
-#large{
-}
-
 article p.town-article img {  /* This structure refers to img elements that are the posterity of paragraph elements within artcle elements */
   width: ???; /* fill the page in the small/phone view */
   margin: ???;
 }
 
-footer {}
+footer {float:left;}
 footer aside {}
 footer>p {} /* This structure refers to p elements that are direct children of the footer element */
 
-
-
 /* Other Class Selectors */
+
+
