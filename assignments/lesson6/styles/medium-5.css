@@ -1,0 +1,60 @@
+ @media only screen and (min-width: 414px) {
+  /* Only CSS rules that need to be changed to meet the layout needs from small to medium go in here */
+  
+    
+    body{
+        font-size: 18px;        
+    }
+     
+     nav{
+      
+     }
+     
+     ul{
+         background-color: paleturquoise;
+         width: 100vw;
+        
+     }
+     li {
+            display: inline;
+            padding: 15px;
+         font-weight: bold;
+            
+         }
+     
+     
+     #town{
+         width: 60%;
+         float:left;
+         padding-right: 15px;
+         
+     } 
+     
+     #tenday{
+         display: inline-grid;
+         
+     }
+    table, th, td {
+   border: 1px solid black;
+        padding: 10px;
+}
+Try it Yourself »
+
+     
+     #bballnews{
+         float:left;
+     }
+     
+     #bball{
+         float:left;
+     }
+     
+     article{
+         float:left
+     }
+  .hamburger{ display:none; }  /* hamburger button does not need to be shown */
+  
+  section.forecast { display: ???; }  /* show the 10-day forecast with the medium view and up */
+  
+   article p.town-article img { width: 62.666%; float:right; }  /* responsive images */
+}
