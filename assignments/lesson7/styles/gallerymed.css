@@ -1,0 +1,13 @@
+@media only screen and (min-width: 600px)
+{
+    
+
+.wrapper
+    {
+        display: grid;
+        grid-template-columns: 200px 200px;
+        grid-column-gap: 250px;
+        grid-row-gap: 50px
+        
+    }
+}

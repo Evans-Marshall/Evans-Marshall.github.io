@@ -1,0 +1,14 @@
+/* large css */
+
+@media only screen and (min-width: 1200px)
+{
+    
+    .wrapper
+    {
+        display: grid;
+        grid-template-columns: 400px 400px 400px;
+        
+        grid-gap: 30px;
+        
+    }
+}
