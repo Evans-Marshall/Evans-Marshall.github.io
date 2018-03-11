@@ -23,12 +23,12 @@
     <button class="hamburger" onclick="myFunction()">&#9776;</button>
   <nav>
     <ul class="hidden" id="myTopnav">
-    	<li><a href="#">Home</a></li>
+    	<li><a href="index.html">Home</a></li>
     	<li class="active"><a href="#">Franklin</a></li>
     	<li><a href="#">Greenville</a></li>
     	<li><a href="#">Springfield</a></li>
-    	<li><a href="https://yungmoose.github.io/assignments/lesson8/stormcenter.html">Storm Center</a></li>
-    	<li><a href="https://yungmoose.github.io/assignments/lesson7/gallery-7.html">Gallery</a></li>
+    	<li><a href="stormcenter.html">Storm Center</a></li>
+    	<li><a href="gallery-7.html">Gallery</a></li>
     </ul>		
   </nav>
      <h2>City of Franklin</h2>
@@ -44,13 +44,13 @@
 <div class="grid-container" id="grid">
   <div class="item1" id="itemone"><h3>Weather Summary</h3></div>
   <div class="item2">Temp</div>
-  <div class="item3">82&deg;</div>  
-  <div class="item6"></div>
-  <div class="item7"><img src="images/sun.jpg" alt="" width="30" height="30"></div>
+  <div class="item3" id="temp_f">&deg;</div>  
+  <div class="item6" id="howisit"></div>
+    <picture class="item7"> <img id="icon" alt="Current_Sky" > </picture>
   <div class="item8">Precipitation</div>
-  <div class="item9">Trace</div> 
+  <div class="item9" id="precip_today_in"></div> 
   <div class="item10">Wind Speed</div>
-  <div class="item11">10 mph</div>
+  <div class="item11" id="wind_mph"></div>
   <div class="item12">Wind Chill Temp</div>
   <div id="output" class="item12">78&deg;</div> 
 </div>         
@@ -110,6 +110,6 @@ On Saturday night in Franklin, the Golden Eagles won the game that mattered most
     <script src="js/currentdate.js"></script>
     <script src="js/hamburger.js"></script>
     <script src="js/windchill.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/wu-weather.js"></script>
 </body>
 </html>
