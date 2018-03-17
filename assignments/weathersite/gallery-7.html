@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Marshall Evans - CIT 230 - Gallery Page Assignment</title>
+        <meta name="description" content="Gallery">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/gallerymain.css">
+        <link rel="stylesheet" media="(min-width: 600px)" href="styles/gallerymed.css">
+        <link rel="stylesheet" media="(min-width: 1200px)" href="styles/gallerylarge.css">
+        <link href="styles/main-5.css" rel="stylesheet">    <!-- default styles - small/phone views -->
+        <link href="styles/medium-5.css" rel="stylesheet" >  <!-- medium/tablet views -->
+        <link href="styles/large-5.css" rel="stylesheet">   <!-- large/wide/desktop views --> 
+        
+    </head>
+    <body>
+        <header class="container">
+            <h1><a href="index.html"> <img id="lightning" src="images/lightning.jpg" alt="The site logo" width="50" height="50"></a>Stormchasers</h1>           
+        </header>
+        <br>
+    <button class="hamburger" onclick="myFunction()">&#9776;</button>
+    <nav>
+    <ul class="hidden" id="myTopnav">
+    	<li><a href="index.html">Home</a></li>
+    	<li><a href="franklin-9.html">Franklin</a></li>
+    	<li><a href="greenville.html">Greenville</a></li>
+    	<li><a href="springfield.html">Springfield</a></li>
+    	<li><a href="stormcenter.html">Storm Center</a></li>
+    	<li class="active"><a href="#">Gallery</a></li>
+    </ul>		
+  </nav>
+        <br>
+        <main> 
+            <div class="wrapper">
+                <div class="box a"><img src="images/ice.jpg" width="400px" height="300px" alt="Ice Storm">
+                <p>Cold and icy day.</p></div>
+                <div class="box b"><img src="images/snowy.jpg" width="400px" height="300px" alt="Day of snow."><p>Day of snow.</p></div>                
+                <div class="box c"><img src="images/storm.jpg" width="400px" height="300px" alt="Bad storm with lightning"><p>Stormy night.</p></div>
+                <div class="box d"><img src="images/tree.jpg" width="400px" height="300px" alt="Country road"><p>After the storm.</p></div>                
+                <div class="box e"><img src="images/cloudy.jpg" width="400px" height="300px" alt="clouds over the city"><p>Cloudy days.</p></div>
+                <div class="box f"><img src="images/fog.jpg" width="400px" height="300px" alt="foggy day"><p>Fog sets in thick.</p></div>
+            </div>    
+        </main>
+         <footer>
+    <aside>
+      www.stormchasers.com
+    </aside>
+    <p class="footer-bar">&copy;All Rights Reserved HWI Inc|  <span id="displayDate">2018</span></p>
+  </footer>
+    </body>
+    <script src="js/hamburger.js"></script>
+    <script src="js/currentdate.js"></script>
+</html>
+                        
+
+        
+        
+        

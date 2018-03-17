@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather Home Page</title>
+  <meta name="author" content="Marshall Evans">
+  <meta name="description" content="Weather updates and information for Evans County.">
+  <!-- external style references in the proper cascading order -->    
+  <link href="https://fonts.google.com/specimen/Lora?selection.family=Lora" rel="stylesheet">  <!-- Google API font reference -->
+  <link href="styles/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
+  <link href="styles/main-5.css" rel="stylesheet">    <!-- default styles - small/phone views -->
+  <link href="styles/medium-5.css" rel="stylesheet" >  <!-- medium/tablet views -->
+  <link href="styles/large-5.css" rel="stylesheet">   <!-- large/wide/desktop views --> 
+</head>
+<body>  
+  <header>
+   <h1><a href="index.html"> <img id="lightning" src="images/lightning.jpg" alt="The site logo" width="50" height="50"></a>Stormchasers</h1>
+    <div id=subheading class="subheading">Current news and weather.</div>
+  </header>
+        <br>
+    <button class="hamburger" onclick="myFunction()">&#9776;</button>
+  <nav>
+    <ul class="hidden" id="myTopnav">
+    	<li class="active"><a href="#">Home</a></li>
+    	<li><a href="franklin-9.html">Franklin</a></li>
+    	<li><a href="greenville.html">Greenville</a></li>
+    	<li><a href="springfield.html">Springfield</a></li>
+    	<li><a href="stormcenter.html">Storm Center</a></li>
+    	<li><a href="gallery-7.html">Gallery</a></li>
+    </ul>		
+  </nav>
+    
+    <header>
+
+    </header>
+
+    <section id="towns">
+
+    </section>
+
+     <footer>
+    <aside>
+      www.stormchasers.com
+    </aside>
+    <p class="footer-bar">&copy;All Rights Reserved HWI Inc|  <span id="displayDate">2018</span></p>
+  </footer>
+    <script src="js/currentdate.js"></script>
+    <script src="js/hamburger.js"></script>
+    <script src="js/towns.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Franklin Weather Page</title>
+  <meta name="author" content="Marshall Evans">
+  <meta name="description" content="Weather updates and information for Franklin.">
+  <!-- external style references in the proper cascading order -->    
+  <link href="https://fonts.googleapis.com/css?family=lora" rel="stylesheet">  <!-- Google API font reference -->
+  <link href="styles/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
+  <link href="styles/main-5.css" rel="stylesheet">    <!-- default styles - small/phone views -->
+  <link href="styles/medium-5.css" rel="stylesheet" >  <!-- medium/tablet views -->
+  <link href="styles/large-5.css" rel="stylesheet">   <!-- large/wide/desktop views --> 
+</head>
+<body>  
+  <header>
+    
+   <h1><a href="index.html"> <img id="lightning" src="images/lightning.jpg" alt="The site logo" width="50" height="50"></a>Stormchasers</h1>
+    <div id=subheading class="subheading">Current news and weather.</div>
+  </header>
+        <br>
+    <button class="hamburger" onclick="myFunction()">&#9776;</button>
+  <nav>
+    <ul class="hidden" id="myTopnav">
+    	<li><a href="index.html">Home</a></li>
+    	<li><a href="franklin-9.html">Franklin</a></li>
+    	<li><a href="greenville.html">Greenville</a></li>
+    	<li><a href="springfield.html">Springfield</a></li>
+    	<li class="active"><a href="#">Storm Center</a></li>
+    	<li><a href="gallery-7.html">Gallery</a></li>
+    </ul>		
+  </nav>
+     <h2>Stormcenter Reporting</h2>
+  <main>
+      <section id =form>
+          <form class="form" method="get" name="stormCenter" action="https://yungmoose.github.io/assignments/lesson8/shanks.html"></form>
+             <fieldset>
+                <legend><span>Personal Information</span></legend>
+                    <label><span>Full Name: </span><input name="fullname" type="text" value="" placeholder="Full Name" pattern="[a-zA-Z -._]{3-         99}" required></label>
+                    <label><span>Email: </span><input name="email" type="text" value="" placeholder="youremail@address.com" required></label>
+                    <label><span>Phone: </span><input name="phone" type="tel" value="" placeholder="(208)867-5309" pattern="[0-9]{10,20}"               required></label>
+                    <label><span>Zip Code: </span><input name="zip" type="text" value="" placeholder="83245-0153" pattern="(\d{5}([\-]\d{4})?)"         required></label>
+            </fieldset>
+            
+            <fieldset>
+                <legend><span>Event Info</span></legend>
+                <label><span>Storm Date: </span><input name="date" type="date" ></label>
+                <label>
+                    <span>Weather event:</span>
+                    <input type="text" name="weatherType" list="types">
+                    <datalist id="types">
+                        <option value="Polar Vortex"> </option>
+                        <option value="Fiery Hail"> </option>
+                        <option value="Raining Frogs"> </option>
+                        <option value="Severe Thunderclappers"> </option>
+                        <option value="Wizard Blizzard"> </option>
+                    </datalist>
+                </label>
+                <label>
+                    <span>Storm Region</span>
+                    <input name="Select Region" type="text" name="region" list="cities">
+                    <datalist id="cities">
+                        <option value="Franklin"> </option>
+                        <option value="Greenville"> </option>
+                        <option value="Springfield"> </option>
+                    </datalist>
+                </label>
+
+
+                <label><span>Storm Severity (1 to 10) </span></label>
+                <input name="severe" type="range" id="rating" value="5" min="1" max="10" step="1" oninput="adjustRating(this.value)" onchange="adjustRating(this.value)">
+                <span id="ratingvalue"> 5</span><br>
+
+
+                <div class="danger"><span class="user">Are you in danger?:</span>
+                    <br>
+                    <span class="choices">
+                        <input type="radio" name="danger" value="yes">Yes
+                        <input type="radio" name="danger" value="maybe">Maybe
+                        <input type="radio" name="danger" value="no">No</span>
+                </div>
+            </fieldset>
+
+            <fieldset class="comments">
+                <legend><span>Comments</span>
+                </legend>
+                <textarea rows="7" cols="40" name="comment">Enter text</textarea>
+
+            </fieldset>
+      
+      </section>
+          
+    <input type="submit" value="Submit Form" class="submitBtn">
+    <input type="hidden" value="StormCenterSubmit" name="subject">
+    <input name="redirect" type="hidden" value="https://yungmoose.github.io/assignments/lesson8/shanks.html">
+
+      
+
+  </main>
+    
+  <footer>
+    <aside>
+      www.stormchasers.com
+    </aside>
+    <p class="footer-bar">&copy;All Rights Reserved HWI Inc|  <span id="displayDate">2018</span></p>
+  </footer>
+    <script src="js/currentdate.js"></script>
+    <script src="js/hamburger.js"></script>
+</body>
+</html>

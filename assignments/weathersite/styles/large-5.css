@@ -1,0 +1,75 @@
+@media only screen and (min-width: 1280px) {
+  /* Only CSS rules that need to be changed to meet the layout needs from medium to large/wide go in here */
+    .hamburger{
+        display:none
+    }
+    
+    body{
+        background-color:azure;
+    }
+    h1 {
+        font-size: 4em;
+        text-align: center;
+        
+    }
+    #lightning{
+        height: 100px;
+        width: 100px;
+    }
+    
+    nav{
+
+    }
+    
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    }
+
+    li {
+    float: left;
+    }
+
+    li a {
+    color: darkblue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;        
+    }
+
+
+    li a:hover {
+    background-color: azure;
+    }
+    
+    #grid{
+        font-size: 2em
+    }
+    
+      #tenday{        
+     }
+    
+    #bball{
+        width: 50%;
+        }
+  article p.town-article img { width: 29.333%; }
+    
+    .wrapper{
+        display: grid;
+         grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 8px;
+    }
+    #towns{
+        display: grid;
+        grid-column-gap: 8px;
+    }
+  
+}
+
+
+
+
+
