@@ -1,0 +1,108 @@
+/* This main css file contains the default rules and is geared toward the small/phone view */
+
+* { box-sizing: border-box;}  /* This wildcard applies to all elements ensuring a box layout model */
+https://fonts.googleapis.com/css?family=lora
+body {
+  font-size: 16px;
+    font-family: 'lora', serif;
+  background-color: azure;
+  /* Declare the base font-family - from google font api or other */
+}
+
+header, nav, main, footer { /* the comma means apply the following CSS declarations to all of the listed elements */
+  /* Declare the maximum width and other main element rules to limit the stretch on wide views */
+}
+
+header {
+    font-size: 1.25em;
+    vertical-align:text-top;
+}
+header h1 {
+    display:flex;
+    justify-content: center
+}
+header img {}
+#subheading{
+    font-size: 1.1em;
+}
+
+nav {}
+nav button {}
+nav ul {
+    line-height: 1.5;
+    
+}
+nav ul li {}
+nav ul li a {}
+nav ul li.active a {
+    background-color: lightseagreen;
+}
+nav ul li a:hover {}
+
+#grid{
+    display: grid;
+    border: 1px;
+    grid-row-gap: .15em;
+    align-content: center;
+}
+
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: center;
+}
+
+#tenday{
+    display:none;
+}
+
+#bball{
+    width: 100%;
+}
+
+
+main {}
+main h2 {
+    ;
+}
+main figure { margin: 0 0 .2rem 2%; width:96%; }
+main figure img { width: 100%; }
+
+section {}
+
+article p.town-article img {  /* This structure refers to img elements that are the posterity of paragraph elements within artcle elements */
+  width: ???; /* fill the page in the small/phone view */
+  margin: ???;
+}
+
+footer {}
+footer aside {}
+footer>p {} /* This structure refers to p elements that are direct children of the footer element */
+
+/* Other Class Selectors */
+
+.topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+      }
+@media only screen and (max-width: 414px){
+    .hidden{
+    display: none;
+    }
+    #myTopnav{
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.3em;
+        background-color: darkturquoise;
+    }
+}
+.hamburger { display: block; }
+
+.navigation { list-style: none; padding-left: 0; }
+.navigation li { display: none; }
