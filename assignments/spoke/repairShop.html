@@ -1,0 +1,128 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta author="Marshall Evans" charset="utf-8">
+        <meta name="description" content="Fill Me In">
+        <title>230 Term Site</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="css/normalize.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+        <link href="css/medium.css" rel="stylesheet">
+        <link href="css/large.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet">
+        
+        <script src="js/hamburger.js"></script>
+        <script src="js/jquery-dropdownMenu.js"></script>
+        <script src="js/currentdate.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/pricing.js"></script>
+
+    </head>
+    <body>
+        <header>
+            <div>
+               <h1>The Mountain Spoke Bicycle Shop</h1>
+            <h2>Biking in the Big Sky</h2>
+            </div>
+            <button class="hamburger" onclick="toggleHam()">&#9776;</button>
+        </header>
+        <nav class="clearfix">
+            <ul class="navigation" id="mainmenu">
+                <li><a href="https://yungmoose.github.io/">HOME</a></li>
+                <li><a href="theMountainSpoke.html">MOUNTAIN SPOKE</a></li>
+                <li><a href="adventureTour.html">ADVENTURE TOURS</a></li>
+                <li><a href="events.html">EVENTS</a></li>
+                <li><a href="shop.html">SHOP BIKES</a></li>
+                <li><a class="active" href="repairShop.html">REPAIR SHOP</a></li>
+                <li><a href="contactForm.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <main>
+        <div class="bikes">
+            <h2>REPAIR SHOP</h2>
+            <p>YOUR MOUNTAIN MIKE NEEDS SOME WORK BEFORE HEADING OUR ON THE TRAIL? BRING IT BY AND WE'LL GET HER READY!</p>
+        </div>
+            
+    <table class="table-fill">
+        <thead>
+        <tr>
+        <th class="text-left">Service</th>
+        <th class="text-left">Price</th>
+        </tr>
+        </thead>
+        <tbody class="table-hover">
+        <tr>
+        <td class="text-left">Full Tuneup</td>
+        <td class="text-left" id="tuneup"></td>
+        </tr>
+        <tr>
+        <td class="text-left">Tire &amp; Tube Replace</td>
+        <td class="text-left" id="tire_tube"></td>
+        </tr>
+        <tr>
+        <td class="text-left">Spoke Alignment</td>
+        <td class="text-left" id="spoke_align"></td>
+        </tr>
+        <tr>
+        <td class="text-left">Brake Adjustment</td>
+        <td class="text-left" id="brake_adjust"></td>
+        </tr>
+        <tr>
+        <td class="text-left">Shock Tuneup</td>
+        <td class="text-left" id="shock_tuneup"></td>
+        </tr>
+        <tr>
+        <td class="text-left">New Tubes</td>
+        <td class="text-left" id="tubes"></td>
+        </tr>
+        <tr>
+        <td class="text-left">New Tire Pump</td>
+        <td class="text-left" id="pump"></td>
+        </tr>
+        <tr>
+        <td class="text-left">Pedal Replacements</td>
+        <td class="text-left" id="pedal_replace"></td>
+        </tr>
+        </tbody>
+    </table>
+<br>
+<br>            
+        <div class="repair">
+            <div><img src="images/repairshop.jpg" alt="repair shop">
+                <p>Bring it to us, and we'll fix it.</p>
+                
+            </div>
+        </div>
+
+</main>
+<footer>
+    <p>&copy; 2018 &bull; The Mountain Spoke</a> &bull; Marshall Evans &bull; yungmoose@yahoo.com</p>
+    <p>
+        FOR OVERVIEW VIDEO
+        <a href="http://youtu.be/jtNbhYYweek?hd=1" target="_blank">CLICK HERE</a>.
+    </p>
+</footer>
+
+</body>
+
+<script>
+    var urlString = document.location.href;
+    var urlArray = urlString.split('/');
+    var pageHREF=urlArray[urlArray.length-1];
+
+    if (pageHREF !=="") {
+        var menu = document.querySelectorAll('ul#mainmenu li a');
+        var i;
+        for(i=0; i<menu.length; i++) {
+            var currentURL=(menu[i].getAttribute("href"));
+            menu[i].parentNode.className=""; 
+
+            if (currentURL===pageHREF) {
+                menu[i].parentNode.className="active";	
+            } 
+        } 
+    } 
+</script>
+
+</html>

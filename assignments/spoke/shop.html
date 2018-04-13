@@ -1,0 +1,120 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta author="Marshall Evans" charset="utf-8">
+        <meta name="description" content="Fill Me In">
+        <title>230 Term Site</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="css/normalize.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+        <link href="css/medium.css" rel="stylesheet">
+        <link href="css/large.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet">
+
+        <script src="js/hamburger.js"></script>
+        <script src="js/jquery-dropdownMenu.js"></script>
+        <script src="js/currentdate.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/jquery.slidereveal.min.js"></script>
+    </head>
+    
+    <body>
+        <header>
+            <div>
+               <h1>The Mountain Spoke Bicycle Shop</h1>
+            <h2>Biking in the Big Sky</h2>
+            </div>
+            <button class="hamburger" onclick="toggleHam()">&#9776;</button>
+        </header>
+        <nav class="clearfix">
+            <ul class="navigation" id="mainmenu">
+                <li><a href="https://yungmoose.github.io/">HOME</a></li>
+                <li><a href="theMountainSpoke.html">MOUNTAIN SPOKE</a></li>
+                <li><a href="adventureTour.html">ADVENTURE TOURS</a></li>
+                <li><a href="events.html">EVENTS</a></li>
+                <li><a class="active" href="shop.html">SHOP BIKES</a></li>
+                <li><a href="repairShop.html">REPAIR SHOP</a></li>
+                <li><a href="contactForm.html">CONTACT</a></li>
+            </ul>
+        </nav>
+<main>
+        <div class="bikes">
+            <h2>BIKE SHOP</h2>
+            <p>2 WHEELS ARE FUNNER THAN 4</p>
+        </div>
+        <div id='slider'>SCOTT GAMBLER 710 BIKE
+            <ul>
+                <li>Gambler Alloy Frame</li>
+                <li>FOX 40 Factory Float 203mm Fork</li>
+                <li>FOX DH X2 210mm Shock</li>
+                <li>Shimano Saint 10 Speed / E-13 LG-1+</li>
+                <li>Shimano Saint disc Brakes</li>
+                <li>DT Swiss FR2020 TR Wheels</li>
+                <li>Schwalbe Magic Mary 27.5" SG Tires</li>
+                <li>$6499.99</li>
+            </ul>
+            <img src="images/gambler.png">
+        </div>
+            <button id='trigger'>Gambler Downhill</button>
+    
+    
+            <div id="sample-2" class="side-panel side-panel-right">
+         SCOTT ASPECT 980 BIKE
+            <ul>
+                <li>Aspect 700/900 Alloy Frame</li>
+                <li>HL Zoom 525 100mm travel</li>
+                <li>Shimano Tourney 21 Speed</li>
+                <li>Promax V-Brakes</li>
+                <li>$3199.99</li>
+            </ul>
+            <img src="images/aspect.png">
+        </div>
+         <button style="float: right" class="btn btn-info " id="sample-2-btn">ASPECT 980</button>         
+</main>
+
+<footer>
+    <p>&copy; 2018 &bull; The Mountain Spoke</a> &bull; Marshall Evans &bull; yungmoose@yahoo.com</p>
+    <p>
+        FOR OVERVIEW VIDEO
+        <a href="ohttp://youtu.be/jtNbhYYweek?hd=1" target="_blank">CLICK HERE</a>.
+    </p>
+</footer>
+
+</body>
+    <script>
+        $('#slider').slideReveal({
+          trigger: $("#trigger"),
+
+        });
+        
+          $("#sample-2").slideReveal({
+          trigger: $("#sample-2-btn"),
+          position: "right"
+        });
+        
+         $("#sample-3").slideReveal({
+          trigger: $("#sample-3-btn"),
+          position: "bottom"
+        });
+    </script>
+<script>
+    var urlString = document.location.href;
+    var urlArray = urlString.split('/');
+    var pageHREF=urlArray[urlArray.length-1];
+
+    if (pageHREF !=="") {
+        var menu = document.querySelectorAll('ul#mainmenu li a');
+        var i;
+        for(i=0; i<menu.length; i++) {
+            var currentURL=(menu[i].getAttribute("href"));
+            menu[i].parentNode.className="";
+
+            if (currentURL===pageHREF) {
+                menu[i].parentNode.className="active";	
+            } 
+        } 
+    } 
+</script>
+
+</html>

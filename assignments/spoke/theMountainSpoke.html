@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta author="Marshall Evans" charset="utf-8">
+        <title>230 Term Site</title>
+        <link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="css/normalize.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+        <link href="css/medium.css" rel="stylesheet">
+        <link href="css/large.css" rel="stylesheet">
+        
+
+        <script src="js/hamburger.js"></script>
+        <script src="js/jquery-dropdownMenu.js"></script>
+        <script src="js/currentdate.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+    </head>
+    <body>
+        <header>
+            <h1>The Mountain Spoke Bicycle Shop</h1>
+            <h2>Biking in the Big Sky</h2>
+            <button class="hamburger" onclick="toggleHam()">&#9776;</button>
+        </header>
+        
+        <nav class="navmenu">
+            <ul class="navigation" id="mainmenu">
+                <li><a href="https://yungmoose.github.io/">HOME</a></li>
+                <li><a class="active" href="theMountainSpoke.html">MOUNTAIN SPOKE</a></li>
+                <li><a href="adventureTour.html">ADVENTURE TOURS</a></li>
+                <li><a href="events.html">EVENTS</a></li>
+                <li><a href="shop.html">SHOP BIKES</a></li>
+                <li><a href="repairShop.html">REPAIR SHOP</a></li>
+                <li><a href="contactForm.html">CONTACT</a></li>
+            </ul>
+        </nav>
+<main>
+     <div class="welcome">
+             <h2>WELCOME TO BOZEMAN'S TOP LOCAL MOUNTAIN BICYCLING HEADQUARTERS AND SHOP!</h2>
+        </div>
+
+        <div class="sign">
+            <p>Welcome to The Mountain Spoke! Come bike the Big Sky with us!</p>
+            <img src="images/bikeshop.jpg" alt="Bike Shop">
+        </div>
+    <p>We serve riders of all abilities and ages.</p>
+     <p>Whether you need sales, rental, or equipment, we will get you back in the seat!</p>
+    <p>Find us at 3950 Valley Commons Drive in Bozeman or call us at 208-867-5309</p>
+     <iframe src="https://www.google.com/maps/embed/v1/place?q=3950 Valley Commons Drive, Bozeman, MT
+      &zoom=17
+      &key=AIzaSyCdrzQyMmVkAQ9DQyi0tK92sOjPncJjkxs">
+  </iframe>
+
+           
+</main>
+<footer>
+    <p>&copy; 2018 &bull; The Mountain Spoke</a> &bull; Marshall Evans &bull; yungmoose@yahoo.com</p>
+    <p>
+        OVERVIEW VIDEO
+        <a href="http://youtu.be/jtNbhYYweek?hd=1" target="_blank">CLICK HERE</a>.
+    </p>
+</footer>
+
+</body>
+
+<script>
+    var urlString = document.location.href;
+    var urlArray = urlString.split('/');
+    var pageHREF=urlArray[urlArray.length-1];
+
+    if (pageHREF !=="") {
+        var menu = document.querySelectorAll('ul#mainmenu li a');
+        var i;
+
+        //loop through all the menu items in the navigation
+        for(i=0; i<menu.length; i++) {
+            var currentURL=(menu[i].getAttribute("href"));
+            menu[i].parentNode.className=""; //turn off hilighting by default
+
+            if (currentURL===pageHREF) {
+                menu[i].parentNode.className="active";	//turn on if a match
+            } // end if
+        } // end of the search for a match
+    } // end of if !==
+</script>
+
+</html>

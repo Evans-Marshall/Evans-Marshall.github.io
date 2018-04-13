@@ -1,0 +1,111 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta author="Marshall Evans" charset="utf-8">
+        <meta name="description" content="Fill Me In">
+        <title>230 Term Site</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="css/normalize.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+        <link href="css/medium.css" rel="stylesheet">
+        <link href="css/large.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet">
+
+        <script src="js/hamburger.js"></script>
+        <script src="js/jquery-dropdownMenu.js"></script>
+        <script src="js/currentdate.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    </head>
+    <body>
+        <header>
+            <div>
+         <h1>The Mountain Spoke Bicycle Shop</h1>
+            <h2>Biking in the Big Sky</h2>
+            </div>
+            <button class="hamburger" onclick="toggleHam()">&#9776;</button>
+        </header>
+        <nav class="clearfix">
+            <ul class="navigation" id="mainmenu">
+                <li><a href="https://yungmoose.github.io">HOME</a></li>
+                <li><a href="theMountainSpoke.html">MOUNTAIN SPOKE</a></li>
+                <li><a href="adventureTour.html">ADVENTURE TOURS</a></li>
+                <li><a href="events.html">EVENTS</a></li>
+                <li><a href="shop.html">SHOP BIKES</a></li>
+                <li><a href="repairShop.html">REPAIR SHOP</a></li>
+                <li><a class="active" href="contactForm.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <main>
+
+            <h2>SUBSCRIBE</h2>
+            <div id="content" class="clearfix">
+                <h3>RECIEVE MONTHLY NEWSLETTERS AND SPECIAL OFFERS!</h3>
+            </div>
+                <div class="row">
+                    <div class="left">
+
+                        <form action="FormToEmail.php" method="post" enctype="multipart/form-data" name="subscribe" id="subscribers">
+
+                            <fieldset>
+                                <legend><span>Personal Information</span></legend>
+                                <label><b><span>Fullname:</span></b><input name="fullname" type="text" value="" placeholder="Full Name" pattern="[a-zA-Z -._]{3,99}" required ></label>
+
+                                <label><b><span>Zip Code:</span></b><input name="zip" type="text" value="" placeholder="zip" pattern="[0-9._]{2,5}" required ></label>
+
+                                <label><b><span>Email:</span></b><input formaction="FormToEmail.html" placeholder=email@email.com name="email" type="email" id="storm" required ></label>
+
+                                <label><b><span>Phone:</span></b><input name="phone" type="tel" value="" placeholder="(555) 555-7890" pattern="[0-9]{10,20}" required ></label>
+                            </fieldset>
+
+                            <fieldset class="message"><p>Message:</p>
+                                <textarea rows="4" cols="38" placeholder="Type here...">
+
+                                </textarea>
+                            </fieldset>
+
+                            <input type="submit" value="Submit!" class="submitBtn">
+
+                            <input name="subject" type="hidden" value="Conference Registration" >
+                            <input name="redirect" type="hidden" value="thanksTest.html" >
+                        </form>
+                    </div>
+                </div>
+             <p>Find us at 3950 Valley Commons Drive in Bozeman, call us at 208-867-5309, or email us at service@themountainspoke.com</p>
+     <iframe src="https://www.google.com/maps/embed/v1/place?q=3950 Valley Commons Drive, Bozeman, MT
+      &zoom=17
+      &key=AIzaSyCdrzQyMmVkAQ9DQyi0tK92sOjPncJjkxs">
+  </iframe>
+
+</main>
+<footer>
+    <p>&copy; 2018 &bull; The Mountain Spoke &bull; Marshall Evans &bull; yungmoose@yahoo.com</p>
+    <p>
+        FOR OVERVIEW VIDEO
+        <a href="http://youtu.be/jtNbhYYweek?hd=1" target="_blank">CLICK HERE</a>.
+    </p>
+</footer>
+
+</body>
+
+<script>
+    var urlString = document.location.href;
+    var urlArray = urlString.split('/');
+    var pageHREF=urlArray[urlArray.length-1];
+
+    if (pageHREF !=="") {
+        var menu = document.querySelectorAll('ul#mainmenu li a');
+        var i;
+        for(i=0; i<menu.length; i++) {
+            var currentURL=(menu[i].getAttribute("href"));
+            menu[i].parentNode.className=""; 
+
+            if (currentURL===pageHREF) {
+                menu[i].parentNode.className="active";	
+            } 
+        } 
+    } 
+</script>
+
+</html>

@@ -1,0 +1,101 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta author="Marshall Evans" charset="utf-8">
+        <meta name="description" content="Fill Me In">
+        <title>230 Term Site</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="css/normalize.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+        <link href="css/medium.css" rel="stylesheet">
+        <link href="css/large.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet">
+
+        <script src="js/hamburger.js"></script>
+        <script src="js/jquery-dropdownMenu.js"></script>
+        <script src="js/currentdate.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    </head>
+    <body>
+        <header>
+            <div>
+        <h1>The Mountain Spoke Bicycle Shop</h1>
+            <h2>Biking in the Big Sky</h2>
+            </div>
+            <button class="hamburger" onclick="toggleHam()">&#9776;</button>
+        </header>
+        <nav class="clearfix">
+            <ul class="navigation" id="mainmenu">
+                <li><a href="https://yungmoose.github.io">HOME</a></li>
+                <li><a href="theMountainSpoke.html">MOUNTAIN SPOKE</a></li>
+                <li><a class="active" href="adventureTour.html">ADVENTURE TOURS</a></li>
+                <li><a href="events.html">EVENTS</a></li>
+                <li><a href="shop.html">SHOP BIKES</a></li>
+                <li><a href="repairShop.html">REPAIR SHOP</a></li>
+                <li><a href="contactForm.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <main>
+
+        <div class="bikes">
+            <h2>ADVENTURE TOURS</h2>
+            <p>SEE BOZEMAN LIKE NEVER BEFORE!</p>
+        </div>
+
+        <div class="grid" id="wrap">
+            
+            <div><img src="images/BozemanCreek.jpeg" alt="Bozeman Creek Trail"><p>Bozeman Creek Trail (aka, Sourdough) is an old logging road that parallels Bozeman Creek. The trail's proximity to town and easy grade make this a popular hiking, biking, and cross-country-skiing route. As an out-and-back, distance is up to you; take a short jaunt or bike the full 10 miles to Mystic Lake, where the trail officially ends (additional logging roads and connector trails exist). In the winter, the trail is groomed by the Bridger Ski Foundation, making for a fun skate-ski as well. 
+                <ul>
+                    <li>Skill: Novice</li>
+                    <li>Distance: up to 20 miles</li>
+                    <li>Price: $25 per rider</li>
+                    <li>Location: 6 miles from the Spoke</li>
+                </ul></p></div>
+            
+            <div><img src="images/SouthCottonwood_02.jpg" alt="cottonwood trail"><p>Located southwest of Bozeman, this trail follows South Cottonwood Creek through a dense old-growth forest with lush riparian areas and meadows, criss-crossing the creek along the way. This well-maintained trail is great for hiking, trail running, and mountain biking.
+                <ul>
+                    <li>Skill: Intermediate/Expert</li>
+                    <li>Distance: 6-8 miles</li>
+                    <li>Price: $45 per rider</li>
+                    <li>Location: 8 miles from the Spoke</li>
+                </ul>
+                </p></div>
+           
+            
+
+</p></div>
+        </div>
+    </main>
+
+</main>
+<footer>
+    <p>&copy; 2018 &bull; The Mountain Spoke &bull; Marshall Evans &bull; yungmoose@yahoo.com</p>
+    <p>
+        FOR OVERVIEW VIDEO
+        <a href="http://youtu.be/jtNbhYYweek?hd=1" target="_blank">CLICK HERE</a>.
+    </p>
+</footer>
+
+</body>
+
+<script>
+    var urlString = document.location.href;
+    var urlArray = urlString.split('/');
+    var pageHREF=urlArray[urlArray.length-1];
+
+    if (pageHREF !=="") {
+        var menu = document.querySelectorAll('ul#mainmenu li a');
+        var i;
+        for(i=0; i<menu.length; i++) {
+            var currentURL=(menu[i].getAttribute("href"));
+            menu[i].parentNode.className=""; 
+            if (currentURL===pageHREF) {
+                menu[i].parentNode.className="active";	
+            } 
+        } 
+    } 
+</script>
+
+</html>
